@@ -66,6 +66,11 @@ with style_image:
         ' ',
         ("Choose from List" , "Upload", "URL"))
     if chosen_style == 'Choose from List':
+        try:
+        # Delete style.jpg before setting
+            os.remove("style.jpg")
+        except:
+            pass
         st.write(f"You choosed to Select from List!")
         select = st.selectbox('List', ('Starry night','Clocks','Picasso Portret','Mona Lisa','The Kiss by Klimt','Birth of Venus','Church in Auvers','Sejalec','The Scream','Kofetarica',))
 
@@ -160,3 +165,4 @@ if predict:
         pass
 
 st.write('Made by Srajan')
+st.write('You can find me on [LinkedIn](https://www.linkedin.com/in/srajan-seth-8713b3183/), [Github] (https://github.com/srajanseth84). ')
