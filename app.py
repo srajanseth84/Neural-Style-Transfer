@@ -1,10 +1,14 @@
 import streamlit as st
-import tensorflow_hub as hub 
+import os
+import tensorflow_hub as hub
+from utils import load_img, transform_img, tensor_to_image, imshow
 import tensorflow as tf
+import numpy as np
+from PIL import Image
 
-st.write("""
-# Neural Style Transfer
-""")
+''' # Neural Style Transfer'''
+
+st.write('Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance! \n')
 
 
 @st.cache
@@ -16,11 +20,12 @@ def load_model():
 
 model_load_state = st.text('Loading Model...')
 model = load_model()
+
 # Notify the reader that the data was successfully loaded.
 model_load_state.text('Loading Model...done!')
 
 
-content_image, style_image = st.beta_columns(2)
+content_image, style_image = st.columns(2)
 
 with content_image:
     st.write('## Content Image...')
@@ -59,8 +64,44 @@ with style_image:
     st.write('## Style Image...')
     chosen_style = st.radio(
         ' ',
-        ("Upload", "URL"))
-    if chosen_style == 'Upload':
+        ("Choose from List" , "Upload", "URL"))
+    if chosen_style == 'Choose from List':
+        st.write(f"You choosed to Select from List!")
+        select = st.selectbox('List', ('Starry night','Clocks','Picasso Portret','Mona Lisa','The Kiss by Klimt','Birth of Venus','Church in Auvers','Sejalec','The Scream','Kofetarica',))
+
+        if select == 'Starry night':
+            url = 'https://media.overstockart.com/optimized/cache/data/product_images/VG485-1000x1000.jpg'
+        elif select =='Clocks':
+            url = 'https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg'
+        elif select =='Picasso Portret':
+            url = 'https://images.saatchiart.com/saatchi/1311333/art/6500245/5569923-AOAGHVQR-7.jpg'
+        elif select == 'Mona Lisa':
+            url = 'https://cdn.cnn.com/cnnnext/dam/assets/190430171751-mona-lisa.jpg'
+        elif select == 'The Kiss by Klimt':
+            url = 'https://i.pinimg.com/originals/46/44/7b/46447b35c81b2d750d29e27f7738a6a6.jpg'
+        elif select == 'Birth of Venus':
+            url = 'https://art-sheep.com/wp-content/uploads/2019/06/Sandro-Botticelli-Birth-of-Venus-1024x683.jpg'
+        elif select == 'Church in Auvers':
+            url = 'https://cdn.theculturetrip.com/wp-content/uploads/2019/01/vincent_van_gogh_-_the_church_in_auvers-sur-oise_view_from_the_chevet_-_google_art_project.jpg'
+        elif select =='The Scream':
+            url = 'https://upload.wikimedia.org/wikipedia/commons/9/9d/The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png'
+        elif select == 'Kofetarica':
+            url = 'https://upload.wikimedia.org/wikipedia/commons/6/61/Ivana_Kobilca_-_Kofetarica.jpg'
+        elif select == 'Sejalec':
+            url = 'https://www.bolha.com/image-bigger/slike-umetnine-starine/slika-sejalec-lilijana-levstik-olje-platno-slika-15130001.jpg'
+
+        try:
+            style_path = tf.keras.utils.get_file(
+                os.path.join(os.getcwd(), 'style.jpg'), url)
+        except:
+            pass
+        try:
+            style_image_file = load_img(style_path)
+
+        except:
+            pass
+
+    elif chosen_style == 'Upload':
         st.write(f"You choosed {chosen_style}!")
         style_image_file = st.file_uploader(
             "Pick a Style image", type=("png", "jpg"))
