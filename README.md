@@ -4,11 +4,11 @@
 
 Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance!
 
+[Try it yourself](https://neural-style-transf-streamlit.herokuapp.com/)
 ## Demo
 -----
 
 ![](images/demo.gif.gif)
-
 
 ### A Few Examples
 -------------------
@@ -19,8 +19,14 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 * A scientific study of a turbulent fluid with the style of a abstract blue fluid painting
   <img src = "images/circle_abstract.png">
 
-
-
+## Dependencies
+----
+* [Tensorflow](https://github.com/tensorflow/tensorflow)
+* [Tensorflow-Hub](https://github.com/tensorflow/hub)
+* [Streamlit](https://github.com/streamlit/streamlit)
+* [Numpy](https://github.com/numpy/numpy)
+* [Pillow](https://github.com/python-pillow/Pillow)
+* [Pre-trained Model Used](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)
 ## Run Locally
 ------
 
@@ -60,7 +66,7 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 ```
 
 ## Transfer Learning
-
+------
 Neural Style Transfer (NST) uses a previously trained convolutional network, and builds on top of that. The idea of using a network trained on a different task and applying it to a new task is called transfer learning.
 
 <img src="images/vgg19.jpg">
