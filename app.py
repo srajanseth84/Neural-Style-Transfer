@@ -6,9 +6,13 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
+st.set_page_config(page_title="Neural Style Transfer",
+                   page_icon="🖼")
+
 ''' # Neural Style Transfer'''
 
 st.write('Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance! \n')
+st.write("To know more about this app, visit [**GitHub**](https://github.com/srajanseth84/Neural-Style-Transfer)")
 
 
 @st.cache
