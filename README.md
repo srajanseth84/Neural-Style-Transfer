@@ -8,7 +8,7 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 ## Demo
 -----
 
-![](images/demo.gif.gif)
+![](extras/demo.gif.gif)
 
 ### A Few Examples
 -------------------
@@ -73,7 +73,7 @@ Neural Style Transfer (NST) uses a previously trained convolutional network, and
     
 Following the original [NST paper](https://arxiv.org/abs/1508.06576), I have used the VGG network. Specifically, VGG-19, a 19-layer version of the VGG network. This model has already been trained on the very large ImageNet database, and thus has learned to recognize a variety of low level features (at the earlier layers) and high level features (at the deeper layers)    
 
-## Authors
+## Author
 
 - [@srajanseth84](https://github.com/srajanseth84)
 
