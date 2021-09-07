@@ -4,8 +4,12 @@
 
 Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance!
 
+## Demo
 
-#### A few examples
+![](images/demo.gif.gif)
+
+
+### A few examples
 -------------------
 * The beautiful ruins of the ancient city of Persepolis (Iran) with the style of Van Gogh (The Starry Night) 
   <img src="images/pasargad_kashi.png">
