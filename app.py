@@ -167,10 +167,7 @@ if predict:
 st.markdown("Created by **Srajan Seth**")
 st.markdown(body="""
 
-<th style="border:None"><a href="https://www.linkedin.com/in/srajan-seth-8713b3183/" target="blank"><img align="center" src="extras/linkdin.png" alt="srajanseth84" height="40" width="40" /></a></th>
-<th style="border:None"><a href="https://github.com/srajanseth84" target="blank"><img align="center" src="extras/github.png" alt="srajanseth84" height="40" width="40" /></a></th>
+<th style="border:None"><a href="https://www.linkedin.com/in/srajan-seth-8713b3183/" target="blank"><img align="center" src="https://bit.ly/3wCl82U" alt="srajan-seth-8713b3183" height="40" width="40" /></a></th>
+<th style="border:None"><a href="https://github.com/srajanseth84" target="blank"><img align="center" src="https://bit.ly/3c2onZS" alt="srajanseth84" height="40" width="40" /></a></th>
 
 """, unsafe_allow_html=True)
-
-st.write('Made by Srajan')
-st.write('You can find me on [LinkedIn](https://www.linkedin.com/in/srajan-seth-8713b3183/), [Github] (https://github.com/srajanseth84). ')
