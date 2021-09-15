@@ -4,7 +4,9 @@
 
 Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance!
 
-## [To View Deployed Demo](https://neural-style-transf-streamlit.herokuapp.com/)
+## [To View Deployed Demo on Heroku](https://neural-style-transf-streamlit.herokuapp.com/)
+## [To View Deployed Demo on Streamlit](https://share.streamlit.io/srajanseth84/all-ml-projects-streamlit/main/app.py)
+- Just open above link and select Neural Style Transfer
 ## Demo
 -----
 
@@ -19,14 +21,6 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 * A scientific study of a turbulent fluid with the style of a abstract blue fluid painting
   <img src = "images/circle_abstract.png">
 
-## Dependencies
-----
-* [Tensorflow](https://github.com/tensorflow/tensorflow)
-* [Tensorflow-Hub](https://github.com/tensorflow/hub)
-* [Streamlit](https://github.com/streamlit/streamlit)
-* [Numpy](https://github.com/numpy/numpy)
-* [Pillow](https://github.com/python-pillow/Pillow)
-* [Pre-trained Model Used](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)
 ## Run Locally
 ------
 
@@ -64,6 +58,19 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 ```bash
   streamlit run app.py 
 ```
+
+
+
+
+
+## Dependencies
+----
+* [Tensorflow](https://github.com/tensorflow/tensorflow)
+* [Tensorflow-Hub](https://github.com/tensorflow/hub)
+* [Streamlit](https://github.com/streamlit/streamlit)
+* [Numpy](https://github.com/numpy/numpy)
+* [Pillow](https://github.com/python-pillow/Pillow)
+* [Arbitrary Image Stylization V1-256](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)
 
 ## Transfer Learning
 ------
