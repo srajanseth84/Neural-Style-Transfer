@@ -16,7 +16,7 @@ st.write(
     "To know more about this app, visit [**GitHub**](https://github.com/srajanseth84/Neural-Style-Transfer)")
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_model():
     hub_model = hub.load(
         'https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
