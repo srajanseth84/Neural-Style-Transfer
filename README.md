@@ -2,18 +2,23 @@
 # Neural Style Transfer
 
 
-Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image. Have your ever wished you could paint like Picasso or Van Gogh? This is your chance!
+Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image.
 
-## [To View Deployed Demo on Heroku](https://neural-style-transf-streamlit.herokuapp.com/)
-## [To View Deployed Demo on Streamlit](https://share.streamlit.io/srajanseth84/all-ml-projects-streamlit/main/app.py)
+Neural Style Transfer is a `End-to-End CNN Model` which takes **Context** and **Style** image and create a new Image.
+
+
+**Model :** **`Arbitrary Image Stylization V1-256`**
+
+**Trained on :** **`Corpus of roughly 80,000 Paintings`**
+
+## [View Deployed Demo on Heroku](https://neural-style-transf-streamlit.herokuapp.com/)
+## [View Deployed Demo on Streamlit](https://share.streamlit.io/srajanseth84/all-ml-projects-streamlit/main/app.py)
 - Just open above link and select Neural Style Transfer
 ## Demo
------
 
 ![](extras/demo.gif.gif)
 
-### A Few Examples
--------------------
+## Few Examples
 * The beautiful ruins of the ancient city of Persepolis (Iran) with the style of Van Gogh (The Starry Night) 
   <img src="images/perspolis_vangogh.png">
 * The tomb of Cyrus the great in Pasargadae with the style of a Ceramic Kashi from Ispahan 
@@ -22,7 +27,6 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
   <img src = "images/circle_abstract.png">
 
 ## Run Locally
-------
 
 * Clone the project
 
@@ -59,12 +63,7 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
   streamlit run app.py 
 ```
 
-
-
-
-
 ## Dependencies
-----
 * [Tensorflow](https://github.com/tensorflow/tensorflow)
 * [Tensorflow-Hub](https://github.com/tensorflow/hub)
 * [Streamlit](https://github.com/streamlit/streamlit)
@@ -72,8 +71,12 @@ Neural Style Transfer is a technique that uses deep learning to compose one imag
 * [Pillow](https://github.com/python-pillow/Pillow)
 * [Arbitrary Image Stylization V1-256](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)
 
+## Tech Stack
+* **Front-End**: [Streamlit](https://github.com/streamlit/streamlit)
+* **Cloud**: [Heroku](https://www.heroku.com/), [Streamlit Cloud](https://streamlit.io/cloud)
+* **DL-Framework**: [Tensorflow](https://github.com/tensorflow/tensorflow)
+
 ## Transfer Learning
-------
 Neural Style Transfer (NST) uses a previously trained convolutional network, and builds on top of that. The idea of using a network trained on a different task and applying it to a new task is called transfer learning.
 
 <img src="images/vgg19.jpg">
