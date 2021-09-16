@@ -1,7 +1,6 @@
 
 # Neural Style Transfer
 
-
 Neural Style Transfer is a technique that uses deep learning to compose one image in the style of another image.
 
 Neural Style Transfer is a `End-to-End CNN Model` which takes **Context** and **Style** image and create a new Image.
@@ -16,7 +15,7 @@ Neural Style Transfer is a `End-to-End CNN Model` which takes **Context** and **
 - Just open above link and select Neural Style Transfer
 ## Demo
 
-![](extras/demo.gif.gif)
+![](extras/neural.gif)
 
 ## Few Examples
 * The beautiful ruins of the ancient city of Persepolis (Iran) with the style of Van Gogh (The Starry Night) 
